@@ -103,8 +103,11 @@ def restriction(input): #username special character restriction
 Window = Tk()
 Window.geometry("800x600")
 Window.configure(bg="#363333")
+Window.title("PyLauncher")
+dir = str(os.getcwd()) + "\\icon.ico"
+Window.iconbitmap(dir)
 buttonlogo = PhotoImage(file=f"Background.png")
-Title = tkinter.Label(Window,text="PyLauncher",font=("Roboto",36),bg="#363333",fg="#E16428").place(relx=.53,rely=.1,anchor="center")
+Title = tkinter.Label(Window,text="PyLauncher",font=("Roboto",32),bg="#363333",fg="#E16428").place(relx=.5,rely=.1,anchor="center")
 but2 = tkinter.Button(Window,image=buttonlogo,background="#363333",highlightcolor="#363333",highlightthickness=0,bd=0,borderwidth=0,activeforeground="#363333",activebackground="#363333",command=start)
 but2.place(anchor="center",rely=0.37,relx=.69)
 VersionList = open("VersionList.txt","r").read()
@@ -120,7 +123,8 @@ CheckBoxLabel = tkinter.Label(Window,text="Console Toggle",font=("Roboto",10),bg
 KillConsoleLabel = tkinter.Label(Window,text="Kill Console",font=("Roboto",12),bg="#363333",fg="white")
 CheckBoxLabel.place(relx=.61,rely=0.829,anchor="center")
 KillConsoleLabel.place(anchor="center",relx=.11,rely=0.96)
-Image = tkinter.Label(Window, image = (PhotoImage(file=f"TextBox.png")),bg="#363333").place(relx=.5,rely=0.37,anchor="center") #this is image for username
+TextBox = PhotoImage(file=f"TextBox.png")
+Image = tkinter.Label(Window, image = TextBox,bg="#363333").place(relx=.5,rely=0.37,anchor="center") #this is image for username
 onlogo = PhotoImage(file=f"On.png")
 offlogo = PhotoImage(file=f"Off.png")
 killlogo = PhotoImage(file=f"kill.png")
