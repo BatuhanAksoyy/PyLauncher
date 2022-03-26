@@ -179,7 +179,7 @@ if HideState == False:
     CheckBoxLabel.configure(fg="green")
 else:
     CheckBoxLabel.configure(fg="red")
-
+Window.resizable("False","False")
 Window.mainloop()
 
 
