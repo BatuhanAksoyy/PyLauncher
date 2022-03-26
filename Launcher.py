@@ -91,6 +91,7 @@ def OnConsole():
     SaveInformation()
 def select_file(): #browse directories
     curdir = filedialog.askdirectory(initialdir=str(os.getenv('APPDATA')))
+    PathEntry.delete(0,tkinter.END)
     PathEntry.insert(0,str(curdir))
 def restriction(input): #username special character restriction
     # You can't delete first element of the string. I couldn't figure out yet ill do that in the future.
